@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TransitManage — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <h2>TransitManage</h2>
+  <div>
+    <span id="user-email"></span>
+    <button id="logoutBtn" class="btn-logout">Sair</button>
+  </div>
+</header>
+
+<main class="main-content">
+
+  <section class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-value" id="totalAppointments">0</div>
+      <div>Agendamentos</div>
+    </div>
+
+    <div class="kpi-card">
+      <div class="kpi-value" id="todaysAppointments">0</div>
+      <div>Hoje</div>
+    </div>
+  </section>
+
+  <section class="chart-large">
+    <h3>Resumo</h3>
+    <canvas id="mainChart"></canvas>
+  </section>
+
+  <section class="appointments-card">
+    <h3>Novo Agendamento</h3>
+
+    <form id="form-agendamento">
+      <label for="cliente">Nome</label>
+      <input type="text" id="cliente" placeholder="Nome" required />
+      <label for="dataHora">Data e Hora</label>
+      <input type="datetime-local" id="dataHora" placeholder="Data e Hora" required />
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone" placeholder="Telefone" />
+      <label for="emailCliente">E-mail</label>
+      <input type="email" id="emailCliente" placeholder="E-mail" />
+      <label for="endereco">Local</label>
+      <input type="text" id="endereco" placeholder="Local" required />
+      <label for="observacoes">Observações</label>
+      <textarea id="observacoes" placeholder="Observações"></textarea>
+      <button type="submit" class="btn-primary">Salvar</button>
+    </form>
+  </section>
+
+  <section class="appointments-card">
+    <h3>Agendamentos</h3>
+    <label for="filtro">Buscar agendamentos</label>
+    <input type="text" id="filtro" placeholder="Buscar..." />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Data</th>
+          <th>Telefone</th>
+          <th>Local</th>
+          <th>Obs</th>
+        </tr>
+      </thead>
+      <tbody id="lista-agendamentos"></tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

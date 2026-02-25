@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TransitManage — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container-auth">
+
+    <div class="panel left-panel">
+      <div class="brand">
+        <h1>Transit<span>Manage</span></h1>
+        <p class="subtitle">Gestão inteligente de frotas</p>
+      </div>
+
+      <form class="auth-box" id="form-login">
+        <h2>Entrar</h2>
+        <input type="email" id="login-email" placeholder="E-mail" required />
+        <input type="password" id="login-password" placeholder="Senha" required />
+        <button type="submit" class="btn primary">Login</button>
+        <p class="switch">Não tem conta? <a href="#" id="go-signup">Criar conta</a></p>
+      </form>
+    </div>
+
+    <div class="panel right-panel hidden" id="form-signup">
+      <form class="auth-box">
+        <h2>Criar Conta</h2>
+        <input type="text" id="signup-name" placeholder="Nome completo" required />
+        <input type="email" id="signup-email" placeholder="E-mail" required />
+        <input type="password" id="signup-password" placeholder="Senha" required />
+        <button type="button" id="signup-btn" class="btn secondary">Cadastrar</button>
+        <p class="switch">Já tem conta? <a href="#" id="go-login">Entrar</a></p>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
